@@ -12,6 +12,8 @@ public class Main {
 		Card oneCard = new Card(Rank.ACE, Suit.CLUBS);
 		
 		System.out.println(oneCard);
+		
+		//comment for git branching test
 
 	}
 
