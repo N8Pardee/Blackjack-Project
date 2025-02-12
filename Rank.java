@@ -19,6 +19,8 @@ public enum Rank {
 	private String rank;
 	int value;
 	
+	
+	//enum constructor 
 	Rank(String rank, int value){
 		this.rank = rank;
 		this.value = value;
