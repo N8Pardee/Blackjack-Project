@@ -12,6 +12,7 @@ public class Main {
 		
 		Deck testDeck= new Deck(true);
 		
+		System.out.println("-----ORGANIZED CARDS-----");
 		testDeck.outputCards();
 		
 		/*
@@ -29,6 +30,9 @@ public class Main {
 
 		testDeck.outputCards();
 		*/
+		System.out.println("-------SHUFFLED--------");
+		testDeck.shuffle();
+		testDeck.outputCards();
 		
 		
 		

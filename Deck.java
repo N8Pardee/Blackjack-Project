@@ -58,6 +58,27 @@ public class Deck {
 		}
 	}
 	
+	public void shuffle() {
+		
+		//create a new arraylist to store a random card pulled from organized deck
+		ArrayList <Card> shuffledDeck = new ArrayList<Card>();
+		
+		while(deck.size() > 0)
+		{
+			//create a new integer variable to generate number b/t 0 and 1. This is done in the loop 
+			//since we will need to do this for each card in the deck
+			int randomizedCard = (int)(Math.random() * (deck.size()-1));
+			shuffledDeck.add(deck.get(randomizedCard));
+			//remove the card from the organized deck by reducing the array lists size
+			deck.remove(randomizedCard);
+		}
+		
+		//set the organized deck to the now shuffled deck
+		deck = shuffledDeck;
+		
+		
+	}
+	
 	
 
 }
