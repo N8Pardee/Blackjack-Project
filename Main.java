@@ -33,6 +33,12 @@ public class Main {
 		System.out.println("-------SHUFFLED--------");
 		testDeck.shuffle();
 		testDeck.outputCards();
+		System.out.println("-------DEALER CREATION TEST--------");
+		Dealer dealer = new Dealer();
+		
+		System.out.println(dealer.getName());
+		
+		
 		
 		
 		
