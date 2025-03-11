@@ -8,14 +8,14 @@ public class Player extends Person{
 		
 		super.setName("Player");
 	}
-	
-	//create decision based on choices using integer from user input. this method will return a boolean value dependent on 
-	//the integer used
 
-	public boolean gameDecision(int choice) {
+	//based on players decision, we will modify the deck as needed
+	public void playerDecision(Deck deck, Deck discard) {
 		
-		return true;
+		//if player chooses to hit, decrease deck size
+		
 		
 	}
 
+	
 }

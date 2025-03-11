@@ -43,10 +43,17 @@ public class Deck {
 		return deck;
 	}
 	
-	public void addCards(Card card) {
+	public void addSingleCard(Card card) {
 		
 		//use the add method from the ArrayList class to add card to end of the list
 		deck.add(card);
+	}
+	
+	public void addMultipleCards(Card card) {
+		
+		for(int i = 0; i < 52; i++) {
+			deck.add(card);
+		}
 	}
 	
 	public void outputCards() {
@@ -69,15 +76,35 @@ public class Deck {
 			//since we will need to do this for each card in the deck
 			int randomizedCard = (int)(Math.random() * (deck.size()-1));
 			shuffledDeck.add(deck.get(randomizedCard));
+			
 			//remove the card from the organized deck by reducing the array lists size
 			deck.remove(randomizedCard);
 		}
 		
 		//set the organized deck to the now shuffled deck
-		deck = shuffledDeck;
-		
-		
+		deck = shuffledDeck;	
 	}
+	
+	//check if deck is empty
+	public boolean hasCards() {
+		if(deck.size() <= 0) {
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+	
+	//reshuffle deck from discard pile. Use arraylist.addAll(
+	public void discardPile(Deck discard) {
+		
+		if(hasCards() != true) {
+			
+		}
+	}
+	
+	
+	
 	
 	
 
