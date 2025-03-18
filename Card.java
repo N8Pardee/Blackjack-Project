@@ -16,6 +16,13 @@ public class Card {
 		this.rank = rank;
 		this.suit = suit;
 	}
+	
+	
+	//constructor created for returning the top card of the deck into the hand
+	public Card(Card cardFromTopOfDeck) {
+		this.suit = cardFromTopOfDeck.getSuit();
+		this.rank = cardFromTopOfDeck.getRank();
+	}
 
 	//returns the card "values" in a string
 	public String toString() {

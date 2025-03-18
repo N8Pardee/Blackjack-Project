@@ -12,10 +12,11 @@ public class Main {
 		
 		Deck testDeck= new Deck(true);
 		
+		/*
 		System.out.println("-----ORGANIZED CARDS-----");
 		testDeck.outputCards();
 		
-		/*
+		
 		//create cards
 		Card aCard = new Card(Rank.QUEEN, Suit.CLUBS);
 		Card bCard = new Card(Rank.ACE, Suit.DIAMONDS);
@@ -30,13 +31,28 @@ public class Main {
 
 		testDeck.outputCards();
 		*/
-		System.out.println("-------SHUFFLED--------");
+		
+		/*System.out.println("-------SHUFFLED--------");
 		testDeck.shuffle();
 		testDeck.outputCards();
 		System.out.println("-------DEALER CREATION TEST--------");
+		*/
 		Dealer dealer = new Dealer();
 		
 		System.out.println(dealer.getName());
+		
+		Hand testHand = new Hand();
+		testHand.addSingleCard(testDeck);
+		testHand.addSingleCard(testDeck);
+		//testHand.addSingleCard(testDeck);
+		System.out.println("--test hand-- ");
+		System.out.println(testHand);
+		System.out.println("Test Deck has: ");
+		testDeck.outputCards();
+		
+		
+		
+		
 		
 		
 		

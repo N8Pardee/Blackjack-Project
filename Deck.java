@@ -38,7 +38,7 @@ public class Deck {
 	}	
 	
 	//getter to return a card from the deck
-	public ArrayList<Card> getCard() {
+	public ArrayList<Card> getCards() {
 		
 		return deck;
 	}
@@ -95,16 +95,21 @@ public class Deck {
 		}
 	}
 	
-	//reshuffle deck from discard pile. Use arraylist.addAll(
+	/*reshuffle deck from discard pile. Use arraylist.addAll(
 	public void discardPile(Deck discard) {
 		
 		if(hasCards() != true) {
 			
 		}
 	}
-	
-	
-	
+	*/
+
+	public Card takeCardFromDeck() {
+		
+		Card topCard = new Card(deck.get(0));
+		deck.remove(0);
+		return topCard;
+	}
 	
 	
 
