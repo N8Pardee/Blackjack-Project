@@ -47,4 +47,14 @@ public abstract class Person {
 		
 		return("Current hand : " + playerHand);
 	}
+	
+	public void Hit(Deck deck, Deck discard) {
+		
+		//add a card to current hand
+		
+		//remove card from current deck
+		
+		//
+		
+	}
 }
