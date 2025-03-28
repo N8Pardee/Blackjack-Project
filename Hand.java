@@ -5,15 +5,7 @@ import java.util.ArrayList;
 
 public class Hand {
 	
-	/*possible methods
-	 * 
-	 * dealHand
-	 * addSingleCard	 * 
-	 * discardHand
-	 * calculateHandValue
-	 * toString
-	 * 
-	 */
+	
 	
 	private ArrayList<Card> hand;
 	
@@ -29,6 +21,7 @@ public class Hand {
 		hand.add(deck.takeCardFromDeck());
 	}
 	
+
 	public String toString() {
 		String handOutput = "";
 		
@@ -39,5 +32,5 @@ public class Hand {
 		
 		return handOutput;
 	}
-
+	
 }
