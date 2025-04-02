@@ -10,7 +10,7 @@ public class Main {
 		//System.out.println(Suit.CLUBS);
 		//System.out.println(Rank.ACE);
 		
-		Deck testDeck= new Deck(true);
+		//Deck testDeck= new Deck(true);
 		
 		/*
 		System.out.println("-----ORGANIZED CARDS-----");
@@ -37,6 +37,8 @@ public class Main {
 		testDeck.outputCards();
 		System.out.println("-------DEALER CREATION TEST--------");
 		*/
+		
+		/*
 		Dealer dealer = new Dealer();
 		
 		System.out.println(dealer.getName());
@@ -49,7 +51,9 @@ public class Main {
 		System.out.println(testHand);
 		System.out.println("Test Deck has: ");
 		testDeck.outputCards();
+		*/
 		
+		Game startGame = new Game();
 		
 		
 		

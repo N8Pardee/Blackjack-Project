@@ -49,7 +49,7 @@ public class Deck {
 		deck.add(card);
 	}
 	
-	public void addMultipleCards(Card card) {
+	public void addMultipleCardstoDeck(Card card) {
 		
 		for(int i = 0; i < 52; i++) {
 			deck.add(card);
@@ -95,14 +95,6 @@ public class Deck {
 		}
 	}
 	
-	/*reshuffle deck from discard pile. Use arraylist.addAll(
-	public void discardPile(Deck discard) {
-		
-		if(hasCards() != true) {
-			
-		}
-	}
-	*/
 
 	public Card takeCardFromDeck() {
 		

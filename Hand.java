@@ -8,6 +8,7 @@ public class Hand {
 	
 	
 	private ArrayList<Card> hand;
+	private int handSum = 0;
 	
 	//constructor for hand
 	Hand() {
@@ -16,12 +17,23 @@ public class Hand {
 		
 	}
 	
+	//takes card from top of deck and adds it to the hand
 	public void addSingleCard(Deck deck) {
 		
 		hand.add(deck.takeCardFromDeck());
 	}
 	
-
+	//returns sum of the total value of cards
+	public int handValue() {
+		
+		for(Card card: hand) {
+			handSum+= card.getCardValue();
+		}
+		
+		return handSum;
+	}
+	
+	
 	public String toString() {
 		String handOutput = "";
 		
