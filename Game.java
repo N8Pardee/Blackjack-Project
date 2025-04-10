@@ -42,13 +42,10 @@ public class Game {
 		//method for player decision
 		//method for dealer decision
 		//compareScores
-		discardHands();
+		playerHand.discardHand(discardDeck);
+		dealerHand.discardHand(discardDeck);
 	}
 	
-	//this function places cards in hand into the discard deck
-	public void discardHands() {
-		discardDeck.addMultipleCardsToDeck();
-	}
 	
 	//pass either player or dealer hand into fn and add card to it
 	public void hit(Hand hand) {

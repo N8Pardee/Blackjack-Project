@@ -1,4 +1,5 @@
 package blackJackGame;
+import java.util.ArrayList;
 
 //parent of player and dealer
 
@@ -48,13 +49,19 @@ public abstract class Person {
 		return("Current hand : " + playerHand);
 	}
 	
-	public void Hit(Deck deck, Deck discard) {
+	
+	
+		public void hit(Deck mainDeck, Deck Discard) {
 		
-		//add a card to current hand
+			if(mainDeck.hasCards()) {
+				playerHand.addSingleCard(mainDeck);
+			}
+			else {
+				System.out.println("Main Deck has no cards");
+			}
+		}
 		
-		//remove card from current deck
-		
-		//
-		
-	}
+		public void stand() {
+			
+		}
 }

@@ -1,19 +1,37 @@
 package blackJackGame;
+import java.util.Scanner;
 
 //child of person class and handles player operations
 public class Player extends Person{
+	
+	Scanner keyboardInput = new Scanner(System.in);
+	private int playerChoice;
 	
 	//constructor
 	public Player(){
 		
 		super.setName("Player");
 	}
-
-	//based on players decision, we will modify the deck as needed
-	public void playerDecision(Deck deck, Deck discard) {
+	
+	public int promptPlayerForInput()
+	{
+		System.out.println("Press one of the following: 1.Hit, 2.Stand, 3.Quit game");
+		playerChoice = keyboardInput.nextInt();
+		return playerChoice;
+	}
+	public void playerDecision(Deck deck, Deck discard) {		
 		
-		//if player chooses to hit, decrease deck size
+		promptPlayerForInput();
 		
+		if(playerChoice == 1) {
+			this.hit(deck, discard);
+		}
+		else if(playerChoice==2) {
+			this.stand();
+		}
+		else {
+			this.exit(); //add exit method later
+		}
 		
 	}
 

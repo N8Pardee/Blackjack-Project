@@ -49,11 +49,9 @@ public class Deck {
 		deck.add(card);
 	}
 	
-	public void addMultipleCardstoDeck(Card card) {
+	public void addMultipleCardstoDeck(ArrayList<Card> cards) {
 		
-		for(int i = 0; i < 52; i++) {
-			deck.add(card);
-		}
+		deck.addAll(cards);
 	}
 	
 	public void outputCards() {
