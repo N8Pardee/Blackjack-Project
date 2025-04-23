@@ -33,24 +33,20 @@ public class Deck {
 	}
 	
 	public Deck() {
-		
 		deck = new ArrayList<Card>();
 	}	
 	
 	//getter to return a card from the deck
 	public ArrayList<Card> getCards() {
-		
 		return deck;
 	}
 	
-	public void addSingleCard(Card card) {
-		
+	public void addSingleCard(Card card) {		
 		//use the add method from the ArrayList class to add card to end of the list
 		deck.add(card);
 	}
 	
-	public void addMultipleCardstoDeck(ArrayList<Card> cards) {
-		
+	public void addMultipleCardstoDeck(ArrayList<Card> cards) {		
 		deck.addAll(cards);
 	}
 	
@@ -98,7 +94,23 @@ public class Deck {
 		
 		Card topCard = new Card(deck.get(0));
 		deck.remove(0);
+		
 		return topCard;
+	}
+	
+	public void clearDeck() {
+		deck.clear();
+	}
+	
+	//reloads main deck from discard deck
+	public void reloadEmptyDeck(Deck discard) {
+		
+		//pass in the discard deck and retrieve cards from that array list
+		this.addMultipleCardstoDeck(discard.getCards());
+		this.shuffle();
+		discard.clearDeck();
+		System.out.println("Main deck is empty. Reloading deck from discard pile");
+		
 	}
 	
 	

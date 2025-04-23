@@ -33,31 +33,18 @@ public class Game {
 		dealerHand.addSingleCard(mainDeck);
 	}
 	
-	public void gameRound() {
-					
+	public void gameRound() {			
 		//call methods that compare scores
 		//since this method is for one game round, 
 		dealStartingHand();
 		printHandValues();
-		//method for player decision
-		//method for dealer decision
-		//compareScores
 		playerHand.discardHand(discardDeck);
 		dealerHand.discardHand(discardDeck);
 	}
 	
 	
-	//pass either player or dealer hand into fn and add card to it
-	public void hit(Hand hand) {
-		hand.addSingleCard(mainDeck);
-	}
 	
-	public void stand() {
-		
-	}
-	
-	public void printHandValues()
-	{
+	public void printHandValues(){
 		//call check score method
 		System.out.println("Player hand total is " + playerHand.handValue()+ ":");
 		System.out.println("Dealer hand total is " + dealerHand.handValue() + ":");
@@ -69,33 +56,9 @@ public class Game {
 	}
 	
 
-	//pass in the sum of the players cards
-	//public boolean isBust() {
-		
-		
-		/*if(playerHandTotal > 21)
-		 * {
-		 * 		return true;
-		 * }
-		 * else{
-		 * 		return false;
-		 * } 
-		 * 
-		 */
-	//}
+
 
 }
 
-/*
- * functions that handle game logic 
- * 
- * FN:
- 		Start game
- 		hit
- 		stand
- 		bust
- 		
- * 
- */
 
 

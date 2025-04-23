@@ -27,10 +27,10 @@ public class Player extends Person{
 			this.hit(deck, discard);
 		}
 		else if(playerChoice==2) {
-			this.stand();
+			System.out.println("You Stand");
 		}
 		else {
-			this.exit(); //add exit method later
+			System.exit(0); 
 		}
 		
 	}

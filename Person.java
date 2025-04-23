@@ -9,12 +9,12 @@ public abstract class Person {
 	private String name; 
 	
 	//constructor for person
-	public Person(){
-		
+	public Person(){		
 		//create hand object for person object
 		this.playerHand = new Hand();		
 		
 	}
+	
 	//create setter and getter for player hand
 	public Hand getHand() {
 		return this.playerHand;
@@ -25,8 +25,7 @@ public abstract class Person {
 	}
 	
 	//setters and getters to obtain persons name
-	public void setName(String playerName)
-	{
+	public void setName(String playerName){
 		this.name = playerName;
 	}
 	
@@ -35,7 +34,6 @@ public abstract class Person {
 	}
 	//check for blackjack in player hand. takes in hand parameter
 	public boolean hasBlackjack(int currentHandValue){
-		
 		if(currentHandValue == 21){
 			return true;
 		}
@@ -44,24 +42,22 @@ public abstract class Person {
 		}
 	}
 	
-	public String showHand(String playerHand){
-		
+	public String showHand(String playerHand){		
 		return("Current hand : " + playerHand);
+	}	
+	
+	public void hit(Deck mainDeck, Deck Discard){
+	
+		if(mainDeck.hasCards()) {
+			playerHand.addSingleCard(mainDeck);
+		}
+		else {
+			System.out.println("Main Deck has no cards");
+			mainDeck.reloadEmptyDeck(Discard);
+		}
 	}
 	
-	
-	
-		public void hit(Deck mainDeck, Deck Discard) {
+	public void stand() {
 		
-			if(mainDeck.hasCards()) {
-				playerHand.addSingleCard(mainDeck);
-			}
-			else {
-				System.out.println("Main Deck has no cards");
-			}
-		}
-		
-		public void stand() {
-			
-		}
+	}
 }
