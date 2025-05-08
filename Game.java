@@ -38,6 +38,8 @@ public class Game {
 		//since this method is for one game round, 
 		dealStartingHand();
 		printHandValues();
+		player.playerDecision(mainDeck, discardDeck);
+		playerHand.handValue();
 		playerHand.discardHand(discardDeck);
 		dealerHand.discardHand(discardDeck);
 	}
