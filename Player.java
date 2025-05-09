@@ -19,22 +19,21 @@ public class Player extends Person{
 		playerChoice=0;
 		
 		//make sure input is not char or string
-		while(getInput) {
-				
-			try{					
+		while(getInput) {				
+			try{				
+					System.out.println();
 					System.out.println("Press one of the following: 1.Hit, 2.Stand, 3.Quit game");
 					playerChoice = keyboardInput.nextInt();
 					getInput = false;
 					
-			}catch(Exception e) {
-			
+			}catch(Exception e) {			
 				System.out.println("input type is incorrect");
 				keyboardInput.next();
 			}
-		}
-		
+		}		
 		return playerChoice;
 	}
+	
 	public void playerDecision(Deck deck, Deck discard) {		
 		
 			obtainKeyboardInput();
@@ -42,8 +41,17 @@ public class Player extends Person{
 			//if player option is greater than 3 then it will call obtainKeyboardInput and playerdecision again
 			
 			if(playerChoice == 1) {
-				this.hit(deck, discard);
+				
 				System.out.println("You hit");
+				this.hit(deck, discard);
+				
+				//if we hit 21 or over we break from the function
+				if(this.getHand().handValue() > 20) {
+					return;
+				}
+				else {
+					playerDecision(deck, discard);
+				}				
 			}
 			else if(playerChoice==2) {
 				System.out.println("You Stand");
@@ -56,10 +64,7 @@ public class Player extends Person{
 				System.out.println("Please select valid option");
 				obtainKeyboardInput();
 				playerDecision(deck, discard);
-			}
+			}			
 			
-		
-	}
-
-	
+	}	
 }

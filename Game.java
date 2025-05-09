@@ -39,25 +39,23 @@ public class Game {
 		dealStartingHand();
 		printHandValues();
 		player.playerDecision(mainDeck, discardDeck);
-		playerHand.handValue();
+		//playerHand.handValue();
 		playerHand.discardHand(discardDeck);
 		dealerHand.discardHand(discardDeck);
 	}
 	
 	
-	
 	public void printHandValues(){
-		//call check score method
+		//print player hand
 		System.out.println("Player hand total is " + playerHand.handValue()+ ":");
-		System.out.println("Dealer hand total is " + dealerHand.handValue() + ":");
-	}
-	
-	public void compareHandValues() {
+		System.out.println("--- " + playerHand.toString()+ " ---");
+		System.out.println();
 		
-		//compare dealer and player hand
+		//print dealer's hand
+		System.out.println("Dealer hand total is " + dealerHand.handValue() + ":");
+		System.out.println("--- " + dealerHand.toString()+ " ---");
 	}
 	
-
 
 
 }

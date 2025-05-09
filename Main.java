@@ -4,7 +4,8 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		System.out.println("BlackJack");
+		System.out.println("!!!! BLACKJACK !!!");
+		System.out.println();
 		
 		//testing that suite enum works
 		//System.out.println(Suit.CLUBS);

@@ -11,7 +11,8 @@ public abstract class Person {
 	//constructor for person
 	public Person(){		
 		//create hand object for person object
-		this.playerHand = new Hand();		
+		this.playerHand = new Hand();	
+		this.name = "";
 		
 	}
 	
@@ -49,7 +50,10 @@ public abstract class Person {
 	public void hit(Deck mainDeck, Deck Discard){
 	
 		if(mainDeck.hasCards()) {
+			
+			System.out.println(this.name + " gets a card");
 			playerHand.addSingleCard(mainDeck);
+			System.out.println("Current hand: " + playerHand.toString());
 		}
 		else {
 			System.out.println("Main Deck has no cards");
@@ -57,7 +61,5 @@ public abstract class Person {
 		}
 	}
 	
-	public void stand() {
-		
-	}
+	
 }
