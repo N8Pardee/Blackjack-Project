@@ -42,6 +42,9 @@ public class Game {
 		//playerHand.handValue();
 		playerHand.discardHand(discardDeck);
 		dealerHand.discardHand(discardDeck);
+		
+		//this is for pushing to github testing
+		System.out.println("Test");
 	}
 	
 	
