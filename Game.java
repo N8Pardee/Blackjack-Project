@@ -43,8 +43,6 @@ public class Game {
 		playerHand.discardHand(discardDeck);
 		dealerHand.discardHand(discardDeck);
 		
-		//this is for pushing to github testing
-		System.out.println("Test");
 	}
 	
 	
