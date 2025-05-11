@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public abstract class Person {
 	
-	private Hand playerHand;
+	protected Hand playerHand;
 	private String name; 
 	
 	//constructor for person
@@ -17,9 +17,9 @@ public abstract class Person {
 	}
 	
 	//create setter and getter for player hand
-	public Hand getHand() {
-		return this.playerHand;
-	}
+		public Hand getHand() {
+			return this.playerHand;
+		}	
 	
 	public void setHand(Hand playersHand){
 		this.playerHand = playersHand;
@@ -43,17 +43,12 @@ public abstract class Person {
 		}
 	}
 	
-	public String showHand(String playerHand){		
-		return("Current hand : " + playerHand);
-	}	
-	
 	public void hit(Deck mainDeck, Deck Discard){
 	
 		if(mainDeck.hasCards()) {
 			
 			System.out.println(this.name + " gets a card");
-			playerHand.addSingleCard(mainDeck);
-			System.out.println("Current hand: " + playerHand.toString());
+			playerHand.addSingleCard(mainDeck);			
 		}
 		else {
 			System.out.println("Main Deck has no cards");
