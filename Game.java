@@ -8,8 +8,7 @@ public class Game {
 	private Dealer dealer;
 	private Deck mainDeck;
 	private Deck discardDeck;
-	private Hand playerHand = new Hand();
-	private Hand dealerHand = new Hand();
+	
 	
 	//game constructor creates a main deck and a deck to discard cards as well as new players/dealers
 	Game(){
@@ -25,12 +24,12 @@ public class Game {
 	
 	public void dealStartingHand() {
 		//deal player's hand
-		playerHand.addSingleCard(mainDeck);
-		playerHand.addSingleCard(mainDeck);
+		player.getHand().addSingleCard(mainDeck);
+		player.getHand().addSingleCard(mainDeck);
 		
 		//deal dealers hand
-		dealerHand.addSingleCard(mainDeck);
-		dealerHand.addSingleCard(mainDeck);
+		dealer.dealerHand.addSingleCard(mainDeck);
+		dealer.dealerHand.addSingleCard(mainDeck);
 	}
 	
 	public void gameRound() {			
@@ -39,22 +38,23 @@ public class Game {
 		dealStartingHand();
 		printHandValues();
 		player.playerDecision(mainDeck, discardDeck);
-		//playerHand.handValue();
-		playerHand.discardHand(discardDeck);
-		dealerHand.discardHand(discardDeck);
 		
+		printHandValues();
+		player.playerHand.discardHand(discardDeck);
+		dealer.dealerHand.discardHand(discardDeck);
+
 	}
 	
 	
 	public void printHandValues(){
 		//print player hand
-		System.out.println("Player hand total is " + playerHand.handValue()+ ":");
-		System.out.println("--- " + playerHand.toString()+ " ---");
+		System.out.println("Player hand total is " + player.getHand().handValue()+ ":");
+		System.out.println("--- " + player.playerHand.toString()+ " ---");
 		System.out.println();
 		
 		//print dealer's hand
-		System.out.println("Dealer hand total is " + dealerHand.handValue() + ":");
-		System.out.println("--- " + dealerHand.toString()+ " ---");
+		System.out.println("Dealer hand total is " + dealer.getHand().handValue() + ":");
+		System.out.println("--- " + dealer.dealerHand.toString()+ " ---");
 	}
 	
 

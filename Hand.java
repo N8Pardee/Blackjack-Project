@@ -5,12 +5,17 @@ import java.util.List;
 public class Hand {	
 	
 	private ArrayList<Card> hand;
-	private int handSum = 0;
+	
 	
 	//constructor for hand
 	Hand() {		
 		hand = new ArrayList<Card>();		
 	}
+	
+	//create setter and getter for player hand
+		public ArrayList<Card> getHandList() {
+			return hand;
+		}
 	
 	//takes card from top of deck and adds it to the hand
 	public void addSingleCard(Deck deck) {
@@ -19,6 +24,8 @@ public class Hand {
 	
 	//returns sum of the total value of cards
 	public int handValue() {
+		int handSum = 0;
+		
 		for(Card card: hand) {
 			handSum+= card.getCardValue();
 		}		
