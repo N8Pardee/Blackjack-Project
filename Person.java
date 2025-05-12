@@ -38,9 +38,8 @@ public abstract class Person {
 		if(currentHandValue == 21){
 			return true;
 		}
-		else {
-			return false;
-		}
+		
+		return false;
 	}
 	
 	public void hit(Deck mainDeck, Deck Discard){

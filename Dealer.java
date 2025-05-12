@@ -13,6 +13,25 @@ public class Dealer extends Person{
 	
 	}
 	
+	public boolean hasBlackJack() {
+		
+		if(this.getHand().handValue() == 21) {
+			System.out.println("Dealer has blackjack");
+			return true;
+		}
+		
+		return false;
+	}
+	
+	public void printFirstHand() {
+		System.out.println(" This is the Dealer's hand: ");
+		System.out.println(super.getHand().getCard(0));
+		System.out.println("Second card is **** ");
+	}
+	
+	public void printHand() {
+		System.out.println("Dealer Hand: " + this.getHand().toString() + " ");
+	}
 	
 	
 }

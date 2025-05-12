@@ -69,4 +69,11 @@ public class Player extends Person{
 		}			
 			
 	}	
+	
+	public void printHandValue(){
+		//print player hand
+		System.out.println("Player hand total is " + super.getHand().handValue()+ ":");
+		System.out.println("--- " + super.getHand().toString()+ " ---");
+		System.out.println();
+	}
 }

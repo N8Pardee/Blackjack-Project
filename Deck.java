@@ -89,6 +89,16 @@ public class Deck {
 		}
 	}
 	
+	public int getDeckSize() {
+		
+		return deck.size();
+	}
+	
+	public void reloadDeckIfLessThanFour(Deck discard) {
+		if(deck.size() < 4) {
+			reloadEmptyDeck(discard);
+		}
+	}
 
 	public Card takeCardFromDeck() {
 		
@@ -112,6 +122,8 @@ public class Deck {
 		System.out.println("Main deck is empty. Reloading deck from discard pile");
 		
 	}
+	
+	
 	
 	
 

@@ -12,11 +12,16 @@ public class Hand {
 		hand = new ArrayList<Card>();		
 	}
 	
+	//---------DELETE if not used--------
 	//create setter and getter for player hand
-		public ArrayList<Card> getHandList() {
-			return hand;
-		}
+//		public ArrayList<Card> getHandList() {
+//			return hand;
+//		}
 	
+	
+	public Card getCard(int index) {
+		return hand.get(index);
+	}
 	//takes card from top of deck and adds it to the hand
 	public void addSingleCard(Deck deck) {
 		hand.add(deck.takeCardFromDeck());
